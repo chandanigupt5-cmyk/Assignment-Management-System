@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Management System - Shyamdeurawa, Maharajganj</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="logo-text">
+                    <h2>Assignment <span>System</span></h2>
+                    <p>Shyamdeurawa, Maharajganj</p>
+                </div>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="#about" class="nav-link"><i class="fa-solid fa-circle-info"></i> About</a></li>
+                <li><a href="#features" class="nav-link"><i class="fa-solid fa-book-open"></i> Assignments</a></li>
+                <li><a href="#how-it-works" class="nav-link"><i class="fa-solid fa-users"></i> Students</a></li>
+                <li><a href="#why-us" class="nav-link"><i class="fa-solid fa-chalkboard-user"></i> Teachers</a></li>
+                <li><a href="#notice" class="nav-link"><i class="fa-solid fa-bullhorn"></i> Notice Board</a></li>
+                <li><a href="#footer" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                
+                <div class="mobile-auth" style="display: none;">
+                    <button class="btn btn-outline" onclick="openAuthModal('login')"><i class="fa-solid fa-user"></i> Login</button>
+                    <button class="btn btn-primary" onclick="openAuthModal('register')"><i class="fa-solid fa-user-plus"></i> Register</button>
+                </div>
+            </ul>
+
+            <div class="nav-auth">
+                <button class="btn btn-outline" onclick="openAuthModal('login')"><i class="fa-solid fa-user"></i> Login</button>
+                <button class="btn btn-primary" onclick="openAuthModal('register')"><i class="fa-solid fa-user-plus"></i> Register</button>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="location-badge">
+                    <i class="fa-solid fa-location-dot"></i> Shyamdeurawa, Maharajganj, India
+                </div>
+                <h1 class="hero-title">
+                    Assignment <span>System</span><br>for a Better Tomorrow
+                </h1>
+                <p class="hero-description">
+                    Manage, submit, and track assignments easily. This platform helps students and teachers work together for better learning and academic growth in Shyamdeurawa Village, Maharajganj.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#how-it-works" class="btn btn-hero-primary"><i class="fa-solid fa-rocket"></i> Get Started</a>
+                    <button class="btn btn-hero-secondary" onclick="openVideoModal()"><i class="fa-solid fa-circle-play"></i> Watch Video</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yellow Village Board Sign Replica from reference photo -->
+        <div class="village-board-mockup">
+            <div class="board-hindi">श्यामदेउरवा</div>
+            <div class="board-english">SHYAMDEURAWA</div>
+            <div class="board-sub">महराजगंज (उ.प्र.)</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="feature-strip-wrapper">
+            <div class="feature-strip-card">
+                <div class="feature-col">
+                    <div class="feature-icon-circle icon-teal">
+                        <i class="fa-solid fa-file-arrow-up"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Submit Assignments</h4>
+                        <p>Easy and simple submission process for students.</p>
+                    </div>
+                </div>
+
+                <div class="feature-col">
+                    <div class="feature-icon-circle icon-blue">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Track Progress</h4>
+                        <p>Check your assignment status and get updates.</p>
+                    </div>
+                </div>
+
+                <div class="feature-col">
+                    <div class="feature-icon-circle icon-orange">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Teacher Support</h4>
+                        <p>Teachers can review and provide feedback.</p>
+                    </div>
+                </div>
+
+                <div class="feature-col">
+                    <div class="feature-icon-circle icon-purple">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Stay Updated</h4>
+                        <p>Get latest notices and important information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="sub-title">About Our System</span>
+                    <h2>Empowering Education in Shyamdeurawa</h2>
+                    <p>
+                        Our Assignment System is designed to make the academic process simple, transparent and effective for students and teachers in Shyamdeurawa, Maharajganj. We aim to build a smarter and connected learning environment for our village.
+                    </p>
+                    <a href="#features" class="btn btn-primary" style="border-radius: 6px;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="about-right">
+                    <div class="school-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&q=80" alt="Rural Primary School Uttar Pradesh">
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card c1">
+                            <div class="stat-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Students</div>
+                        </div>
+
+                        <div class="stat-card c2">
+                            <div class="stat-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                            <div class="stat-number" data-target="10">0</div>
+                            <div class="stat-label">Teachers</div>
+                        </div>
+
+                        <div class="stat-card c3">
+                            <div class="stat-icon"><i class="fa-solid fa-book"></i></div>
+                            <div class="stat-number" data-target="200">0</div>
+                            <div class="stat-label">Assignments</div>
+                        </div>
+
+                        <div class="stat-card c4">
+                            <div class="stat-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">Village (Shyamdeurawa)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">Simple Workflow</span>
+                <h2>How It Works</h2>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Student Login</h3>
+                    <p>Access your portal with registered village credentials.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>View Assignment</h3>
+                    <p>Browse active tasks and deadlines uploaded by teachers.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Submit Assignment</h3>
+                    <p>Upload photos or files directly from your mobile device.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Teacher Reviews</h3>
+                    <p>Get evaluated with grades and supportive feedback.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">System Modules</span>
+                <h2>Everything You Need to Manage Assignments</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-folder-plus"></i></div>
+                    <h3>Assignment Creation</h3>
+                    <p>Teachers easily create, assign, and post guidelines for all subjects.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                    <h3>Online Submission</h3>
+                    <p>Submit homework anytime directly through mobile or browser.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Assignment Tracking</h3>
+                    <p>Real-time status updates: Pending, Submitted, or Evaluated.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-comment-dots"></i></div>
+                    <h3>Teacher Feedback</h3>
+                    <p>Constructive remarks and grading for individual performance.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3>Student Dashboard</h3>
+                    <p>Clean single panel showing upcoming tasks, grades, and news.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Notifications</h3>
+                    <p>Instant alerts when new assignments or announcements arrive.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h3>Notice Board</h3>
+                    <p>Central hub for village school events, exams, and updates.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-box-icon"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                    <h3>Performance Tracking</h3>
+                    <p>Visual statistics to monitor academic growth over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose" id="why-us">
+        <div class="container">
+            <div class="why-grid">
+                <div>
+                    <span class="sub-title" style="color: var(--secondary-blue); font-weight: 600;">Key Benefits</span>
+                    <h2 style="font-size: 30px; margin-bottom: 20px;">Why Choose Our System?</h2>
+                    <ul class="benefit-list">
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Simple & easy to use</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Student-friendly interface</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Teacher-friendly tools</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Faster submission process</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Transparent tracking</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Centralized notices</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Fully mobile responsive</span></li>
+                        <li class="benefit-item"><i class="fa-solid fa-circle-check"></i> <span>Designed for village needs</span></li>
+                    </ul>
+                </div>
+
+                <div id="notice">
+                    <div class="notice-card">
+                        <h3><i class="fa-solid fa-bullhorn"></i> Village Notice Board</h3>
+                        <div class="notice-item">
+                            <div class="notice-date">15 October 2026</div>
+                            <div class="notice-title">Science Assignment 2 uploaded for Class X</div>
+                        </div>
+                        <div class="notice-item">
+                            <div class="notice-date">10 October 2026</div>
+                            <div class="notice-title">Half-Yearly Examination Schedule Published</div>
+                        </div>
+                        <div class="notice-item">
+                            <div class="notice-date">05 October 2026</div>
+                            <div class="notice-title">Parent-Teacher Meeting at Shyamdeurawa School</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Make Learning Smarter?</h2>
+                <p>Join the Assignment System and make assignment management easier for students and teachers in Shyamdeurawa.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-hero-primary" onclick="openAuthModal('register')"><i class="fa-solid fa-user-plus"></i> Get Started</button>
+                    <a href="#footer" class="btn btn-hero-secondary"><i class="fa-solid fa-paper-plane"></i> Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="logo-icon-box">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Assignment System</h3>
+                            <p>Shyamdeurawa, Maharajganj</p>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        A simple digital platform for better assignment management and connected learning tailored for rural education in Uttar Pradesh.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Assignments</a></li>
+                        <li><a href="#how-it-works">Students</a></li>
+                        <li><a href="#why-us">Teachers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#notice">Notice Board</a></li>
+                        <li><a href="#home">Help & Support</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="#" onclick="openAuthModal('login')">Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Shyamdeurawa, Maharajganj, Uttar Pradesh, India</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@example.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 XXXXX XXXXX</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Assignment System. All rights reserved.</div>
+                <div class="motto-text">Learn • Grow • Build a Better Future</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('videoModal')">&times;</span>
+            <h3 style="margin-bottom: 15px; color: var(--primary-blue);">Platform Demo Video</h3>
+            <div style="background:#000; height:240px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff;">
+                <p><i class="fa-solid fa-circle-play" style="font-size:40px; color:var(--emerald-green);"><br></i><br>Demo Video Player</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('authModal')">&times;</span>
+            <h3 id="authTitle" style="margin-bottom: 15px; color: var(--primary-blue);">Portal Access</h3>
+            <form onsubmit="event.preventDefault(); alert('Authentication process initiated.'); closeModal('authModal');">
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; font-size:12px; font-weight:600; margin-bottom:5px;">User Role</label>
+                    <select style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px;">
+                        <option>Student</option>
+                        <option>Teacher</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; font-size:12px; font-weight:600; margin-bottom:5px;">ID / Email</label>
+                    <input type="text" placeholder="Enter Registration ID" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px;" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; border-radius:6px;">Proceed</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
